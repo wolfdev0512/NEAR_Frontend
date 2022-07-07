@@ -1,0 +1,319 @@
+@import "./a11y.css";
+@import "./atcb.css";
+@import "../../../config/styles.scss";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;900&display=swap');
+
+$white: white !default;
+$black: black !default;
+$accent: #e73b93 !default;
+
+:root {
+  /* Typographic Scale */
+  --base-font-size: 14px;
+  @media (min-width: 415px) {
+    --base-font-size: 16px;
+  }
+  @media (min-width: 600px) {
+    --base-font-size: 18px;
+  }
+
+  /* Font Family */
+  --sans: Montserrat, sans-serif;
+  --monospace: "Source Code Pro", monospace;
+
+  /* Font Weights */
+  --fw-regular: 400;
+  --fw-bold: 600;
+  --fw-black: 900;
+
+  /* Line Heights */
+  --lh-headings: 1.1;
+  --lh-copy: 1.5;
+
+  /* Spacing Scale */
+  --base-spacing: 0.5rem;
+  --spacing-xs: calc(var(--base-spacing) / 2);
+  --spacing-s: var(--base-spacing);
+  --spacing-m: calc(var(--base-spacing) * 2);
+  --spacing-l: calc(var(--base-spacing) * 3);
+  --spacing-xl: calc(var(--base-spacing) * 4);
+  --spacing-xxl: calc(var(--base-spacing) * 5);
+
+  /* Sizes */
+  --header-height: 80px;
+  --input-height: 48px;
+  --input-height--small: 40px;
+
+  /* Border Radius */
+  --br-base: 4px;
+
+  /* Colors */
+  /* TODO: move these base colors to settings.json or similar */
+  --white: #{$white};
+  --black: #{$black};
+  --accent: #{$accent};
+
+  --fg: var(--black);
+  --bg: var(--white);
+
+  --gray-1: #{adjust-color($black, $alpha: -0.9)};
+  --gray-2: #{adjust-color($black, $alpha: -0.8)};
+  --gray-3: #{adjust-color($black, $alpha: -0.7)};
+  --gray-4: #{adjust-color($black, $alpha: -0.6)};
+  --gray-5: #{adjust-color($black, $alpha: -0.5)};
+  --gray-6: #{adjust-color($black, $alpha: -0.4)};
+  --gray-7: #{adjust-color($black, $alpha: -0.3)};
+  --gray-8: #{adjust-color($black, $alpha: -0.2)};
+  --gray-9: #{adjust-color($black, $alpha: -0.1)};
+
+  --red: #fc5b5b;
+  @media (prefers-color-scheme: dark) {
+    --bg: var(--black);
+    --fg: var(--white);
+
+    --gray-1: #{adjust-color($white, $alpha: -0.9)};
+    --gray-2: #{adjust-color($white, $alpha: -0.8)};
+    --gray-3: #{adjust-color($white, $alpha: -0.7)};
+    --gray-4: #{adjust-color($white, $alpha: -0.6)};
+    --gray-5: #{adjust-color($white, $alpha: -0.5)};
+    --gray-6: #{adjust-color($white, $alpha: -0.4)};
+    --gray-7: #{adjust-color($white, $alpha: -0.3)};
+    --gray-8: #{adjust-color($white, $alpha: -0.2)};
+    --gray-9: #{adjust-color($white, $alpha: -0.1)};
+
+    --red: #ff8588;
+  }
+}
+
+@function light($color) {
+  @return adjust-color($color, $saturation: 53%, $lightness: 15%);
+}
+
+@function soft($color) {
+  @return adjust-color($color, $alpha: -0.85);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  background-color: var(--bg);
+  color: var(--fg);
+  line-height: var(--lh-copy);
+  font-family: var(--sans);
+  font-size: var(--base-font-size);
+  font-weight: var(--fw-regular);
+}
+
+body {
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: var(--fw-bold);
+  margin: 0;
+  line-height: var(--lh-headings);
+}
+
+img,
+picture,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+a,
+.link {
+  color: var(--accent);
+  padding: 0;
+  text-decoration: none;
+  position: relative;
+}
+a:hover,
+a:focus,
+.link:hover,
+.link:focus {
+  text-decoration: underline;
+}
+a:active,
+.link:active {
+  top: 1px;
+}
+
+strong {
+  font-weight: var(--fw-bold);
+}
+
+em {
+  color: var(--accent);
+  font-style: inherit;
+  font-weight: inherit;
+}
+
+label {
+  display: block;
+}
+
+code {
+  color: var(--fg);
+  padding: var(--spacing-xs) var(--spacing-s);
+  margin: 0;
+  font-size: 85%;
+  font-family: var(--monospace);
+  background-color: var(--gray-2);
+  border-radius: 6px;
+}
+
+button,
+.button,
+input,
+select {
+  font: inherit;
+  outline: none;
+}
+
+button,
+.button {
+  background-color: var(--fg);
+  border-radius: var(--br-base);
+  border: none;
+  color: var(--bg);
+  cursor: pointer;
+  display: inline-block;
+  font-size: inherit;
+  font-weight: var(--fw-regular);
+  position: relative;
+}
+
+input,
+select {
+  background-color: var(--bg);
+  border: 1px solid var(--gray-3);
+  border-radius: var(--br-base);
+  color: inherit;
+}
+
+input,
+select,
+button,
+.button {
+  padding: var(--spacing-s) var(--spacing-m);
+}
+
+button:hover,
+.button:hover,
+button:focus,
+.button:focus {
+  background-color: var(--gray-9);
+  text-decoration: none;
+}
+button:active,
+.button:active {
+  top: 1px;
+}
+button.secondary,
+.button.secondary {
+  background-color: transparent;
+  border: 1px solid var(--gray-3);
+  color: var(--fg);
+}
+button.secondary:focus,
+button.secondary:hover,
+.button.secondary:focus,
+.button.secondary:hover {
+  background-color: transparent;
+  border-color: var(--gray-5);
+}
+
+button.link,
+.button.link {
+  background: none;
+  box-shadow: none;
+  display: inline;
+}
+[disabled] button,
+button[disabled],
+.button[disabled] {
+  box-shadow: none;
+  background-color: var(--gray-3);
+  color: var(--gray-5);
+  cursor: not-allowed;
+  transform: none;
+}
+
+input:hover,
+input:focus,
+input:active,
+select:hover,
+select:focus,
+select:active {
+  border-color: var(--gray-5);
+}
+
+select {
+  appearance: none;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTAwMCAxMDAwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPg0KICA8cGF0aCBmaWxsPSJncmF5IiBkPSJNMTAsMjMyLjdsNDkwLDUzNC41bDQ5MC01MzQuNUgxMHoiIC8+DQo8L3N2Zz4=);
+  background-repeat: no-repeat;
+  background-position: bottom 50% right var(--spacing-s);
+  background-size: var(--spacing-s);
+  cursor: pointer;
+  padding-right: var(--spacing-l);
+}
+
+input.error,
+select.error {
+  border-color: var(--red);
+}
+
+input {
+  caret-color: var(--accent);
+}
+
+input::selection {
+  background-color: var(--accent);
+  color: var(--bg);
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: calc(55 * var(--spacing-m));
+  padding-left: var(--spacing-l);
+  padding-right: var(--spacing-l);
+}
+
+.grid {
+  display: grid;
+  gap: var(--spacing-m);
+  grid-template-columns: repeat(auto-fit, minmax(13em, 1fr));
+  margin: var(--spacing-m) 0;
+
+  &>* {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-m);
+  }
+
+  &>a {
+    color: var(--fg);
+    transform: scale(100%);
+    transition: transform 75ms;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      transform: scale(103%);
+    }
+  }
+}

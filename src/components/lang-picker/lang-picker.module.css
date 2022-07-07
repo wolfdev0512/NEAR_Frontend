@@ -1,0 +1,29 @@
+.wrap {
+  position: relative;
+  display: inline-block;
+}
+
+.globe {
+  position: absolute;
+  left: var(--spacing-s);
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.globe svg {
+  height: var(--spacing-m);
+  width: var(--spacing-m);
+}
+
+.select {
+  border: 1px solid transparent;
+  padding-left: calc(4px + var(--spacing-l));
+  text-align: center;
+}
+.select:hover,
+.select:focus {
+  border-color: var(--gray-3);
+}

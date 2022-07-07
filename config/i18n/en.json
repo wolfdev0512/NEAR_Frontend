@@ -1,0 +1,69 @@
+{
+  "viewIn": "View in English",
+  "langPicker": "English",
+  "title": "Cool NFT Project",
+  "description": "This is the minting page for Cool NFT Project",
+  "calendarEvent": "Go Mint an NFT!",
+  "connectWallet": "Login with NEAR",
+  "signOut": "Sign Out",
+  "new": "New!",
+  "myNFTs": "My NFTs",
+  "nextNFT": "Next NFT",
+  "prevNFT": "Previous NFT",
+  "close": "Close",
+  "zoomIn": "Zoom In",
+  "zoomOut": "Zoom Out",
+  "hero": {
+    "video": "3d_toys_playground.mp4",
+    "title": "NFTs drop at SALE_START!",
+    "body": "Tagline goes here.",
+    "ps": "Want early access? Sign in.",
+    "remaining": "NFTs remaining: REMAINING_COUNT",
+    "cta": "Add to Calendar",
+    "action": "ADD_TO_CALENDAR(SALE_START)",
+    "saleClosed": {
+      "signedIn": {
+        "ps": "Pre-mint start: PRESALE_START\n\nJoin the whitelist! [Join our Discord](https://discord.com/invite/UY9Xf2k) and request an invite."
+      },
+      "vip": {
+        "title": "Welcome, CURRENT_USER!",
+        "ps": "Pre-mint start: PRESALE_START",
+        "action": "ADD_TO_CALENDAR(PRESALE_START)"
+      }
+    },
+    "presale": {
+      "vip": {
+        "title": "Pre-mint started!",
+        "body": "Public minting starts at SALE_START",
+        "ps": "Your remaining pre-mint allowance: MINT_LIMIT",
+        "setNumber": "Number to mint",
+        "cta": "Mint for MINT_PRICE",
+        "action": "MINT"
+      }
+    },
+    "saleOpen": {
+      "title": "Minting has begun!",
+      "ps": "",
+      "setNumber": "Number to mint",
+      "cta": "Mint for MINT_PRICE",
+      "action": "MINT",
+      "signedOut": {
+        "action": "SIGN_IN"
+      }
+    },
+    "allSold": {
+      "title": "All INITIAL_COUNT minted!",
+      "body": "The NFTs have all been created",
+      "ps": "",
+      "cta": "Buy on Marketplace",
+      "action": "GO_TO_PARAS"
+    }
+  },
+  "extraSections": [
+    {
+      "className": "this-class-is-set-in-i18n-files",
+      "text": "# Introducing Cool NFT Project\n\nThis is a longer description of the project. About a paragraph long. Some [filler text](https://placehodler.shapelabs.co/) to demonstrate: Token standard surrendered some burned mnemonic phrase until some wallet because blockchain detected many pre-mine. It based on many automated token generation event, and when Tether formed some trustless in the FUD, Dogecoin slept on lots of anti-money laundering of many stale block!\n\nSolidity limited lots of reinvested distributed denial of service attack! ICO specialises in lots of lightning fast private chain since Zilliqa surrendered few reinvested cryptocurrency, however, because someone limited few provably fiat until the vanity address, Augur stuck many burned pre-mine. They sharded many technical analysis, or NFT specialises in the FOMO in few wash trade.",
+      "image": "example.png"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "author": "@TenKBay",
+  "siteUrl": "https://tenkbay.com",
+  "contractName": "v2.tenk.testnet",
+  "social": [
+    {
+      "href": "https://discord.com/invite/UY9Xf2k",
+      "img":  "discord.svg",
+      "alt": "Discord"
+    },
+    {
+      "href": "https://twitter.com/TenKBay",
+      "img":  "twitter.svg",
+      "alt": "Twitter"
+    }
+  ]
+}
